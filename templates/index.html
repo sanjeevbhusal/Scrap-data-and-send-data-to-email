@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+</head>
+
+<body>
+    <h1 style="color:red">Here are all the posts which have over 100 votes from the first page of Hackernews.</h1>
+    {% for news in news_list %}
+    <h3>Title: <a href={{ news["link"] }}>{{ news["title"] }}</h3> </a>
+    <p>Votes: {{ news["votes"] }}</p>
+    {% endfor %}
+</body>
+
+</html>
